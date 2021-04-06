@@ -45,8 +45,6 @@ export function encounterPokemon(pokemon) {
 }
 
 
-
-
 export function capturePokemon(pokemon) {
 
     const pokedex = getPokedex();
