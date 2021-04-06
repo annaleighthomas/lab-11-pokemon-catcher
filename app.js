@@ -32,7 +32,7 @@ function createPokemonDom() {
 
     img3.src = displayedPokemon[2].url_image;
     pokeLabel3.append(img3);
-    pokeRadio3.value = displayedPokemon[2].url_image;
+    pokeRadio3.value = displayedPokemon[2].pokemon;
 
 }
 
@@ -42,6 +42,8 @@ button.addEventListener('click', () => {
     const selectedRadioButton = document.querySelector('input:checked');
 
     const pokeSelected = findByPokemonName(selectedRadioButton.value);
+
+    console.log(pokeSelected);
 
     capturePokemon(pokeSelected);
     createPokemonDom();

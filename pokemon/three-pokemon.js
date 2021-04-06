@@ -7,23 +7,27 @@ function getRandomPokeIndex() {
 
 export function generateThreePokemon() {
 
-    let randomnum1 = getRandomPokeIndex();
-    let randomnum2 = getRandomPokeIndex();
-    let randomnum3 = getRandomPokeIndex();
+    let randomNum1 = getRandomPokeIndex();
+    let randomNum2 = getRandomPokeIndex();
+    let randomNum3 = getRandomPokeIndex();
 
     while (
-        randomnum1 === randomnum2
-        || randomnum2 === randomnum3
-        || randomnum1 === randomnum3
+        randomNum1 === randomNum2
+        || randomNum2 === randomNum3
+        || randomNum1 === randomNum3
     ) { 
-        randomnum1 = getRandomPokeIndex();
-        randomnum2 = getRandomPokeIndex();
-        randomnum3 = getRandomPokeIndex();
+        randomNum1 = getRandomPokeIndex();
+        randomNum2 = getRandomPokeIndex();
+        randomNum3 = getRandomPokeIndex();
     }
 
-    const poke1 = pokeData[randomnum1];
-    const poke2 = pokeData[randomnum2];
-    const poke3 = pokeData[randomnum3];
+    const poke1 = pokeData[randomNum1];
+    const poke2 = pokeData[randomNum2];
+    const poke3 = pokeData[randomNum3];
+
+    encounterPokemon(poke1);
+    encounterPokemon(poke2);
+    encounterPokemon(poke3);
 
     return [poke1, poke2, poke3];
 }
