@@ -37,14 +37,24 @@ function createPokemonDom() {
 }
 
 createPokemonDom();
+let captured = 0;
 
 button.addEventListener('click', () => {
+
     const selectedRadioButton = document.querySelector('input:checked');
 
     const pokeSelected = findByPokemonName(selectedRadioButton.value);
 
-    console.log(pokeSelected);
 
     capturePokemon(pokeSelected);
-    createPokemonDom();
+    captured++;
+
+    if (captured < 10) {
+        createPokemonDom();
+    } else {
+        localStorage.clear();
+        window.location = './results-page';
+    }
+    console.log(captured);
+
 });
