@@ -10,11 +10,20 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
     <ling rel="stylesheet" href="../styles/results-page.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
         <title>Poke Catcher</title>
 </head>
 
 <body>
     <main>
+        <section>
+            <canvas id="myChart" width="100" height="100"></canvas>
+        </section>
+        <section>
+            <button id="reset-button">
+                RESET
+            </button>
+        </section>
 
         <table>
             <thead>
@@ -28,11 +37,6 @@
 
             </tbody>
         </table>
-        <section>
-            <button id="reset-button">
-                RESET
-            </button>
-        </section>
     </main>
     <script type="module" src="./results.js"></script>
 </body>

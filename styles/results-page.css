@@ -12,3 +12,8 @@ table {
 thead {
     border: 1px dotted black;
 }
+
+
+h1 {
+    font-size: 1rem;
+}
