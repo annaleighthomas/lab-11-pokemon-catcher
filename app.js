@@ -36,14 +36,20 @@ function createPokemonDom() {
 
 }
 
+// const capturedDisplay = document.getElementById('captured-display');
+
 createPokemonDom();
 let captured = 0;
+
+// capturedDisplay.textContent = captured.value;
 
 button.addEventListener('click', () => {
 
     const selectedRadioButton = document.querySelector('input:checked');
 
     const pokeSelected = findByPokemonName(selectedRadioButton.value);
+
+    const capturedDisplayMain = document.getElementById('captured-display-main');
 
 
     capturePokemon(pokeSelected);
@@ -52,9 +58,12 @@ button.addEventListener('click', () => {
     if (captured < 10) {
         createPokemonDom();
     } else {
-        localStorage.clear();
         window.location = './results-page';
     }
-    console.log(captured);
+    
+    capturedDisplayMain.textContent = captured;
 
 });
+
+
+

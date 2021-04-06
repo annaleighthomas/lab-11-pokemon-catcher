@@ -68,6 +68,14 @@ footer {
 }
 
 
+table {
+    border: 2px solid black;
+}
+
+th {
+    border:  1px dotter black;
+}
+
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
