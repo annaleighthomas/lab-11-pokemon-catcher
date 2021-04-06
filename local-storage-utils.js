@@ -20,11 +20,11 @@ export function setPokedex(parsedPokedex) {
     localStorage.setItem(POKEDEX, stringifyPokedex);
 }
 
-// pokemon is an object from poke-data
+
 export function encounterPokemon(pokemon) {
-// pokedex is an empty array 
+
     const pokedex = getPokedex();
-                // pokemon name is blub
+                
     const doesPokemonMatch = findById(pokedex, pokemon.pokemon);
 
     if (doesPokemonMatch) {
@@ -58,3 +58,4 @@ export function capturePokemon(pokemon) {
     return pokedex;
 
 }
+
